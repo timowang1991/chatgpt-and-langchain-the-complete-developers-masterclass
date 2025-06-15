@@ -4,7 +4,9 @@ from langchain_openai import ChatOpenAI
 # Deprecated: Use InMemoryChatMessageHistory instead
 # from langchain.memory import ConversationBufferMemory
 
-from langchain_core.chat_history import InMemoryChatMessageHistory
+# from langchain.memory.chat_message_histories import FileChatMessageHistory
+from langchain_community.chat_message_histories import FileChatMessageHistory
+# from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.runnables import RunnableWithMessageHistory
 from dotenv import load_dotenv
 
@@ -17,7 +19,10 @@ chat = ChatOpenAI()
 #     memory_key="messages", # conversations are added to this key
 #     return_messages=True, # wrap the messages in classes (e.g. HumanMessage, AIMessage)
 # )
-memory = InMemoryChatMessageHistory()
+# memory = InMemoryChatMessageHistory()
+memory = FileChatMessageHistory(
+    file_path="chat_history.txt",  # Path to the file where chat history will be stored
+)
 
 prompt = ChatPromptTemplate(
     input_variables=["content", "messages"],

@@ -1,6 +1,5 @@
 from langchain_openai import OpenAI
 from langchain.prompts import PromptTemplate
-from langchain_core.runnables import RunnableLambda
 # from langchain.chains.llm import LLMChain
 from dotenv import load_dotenv
 import argparse
