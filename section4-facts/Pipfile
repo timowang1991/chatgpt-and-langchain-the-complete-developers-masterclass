@@ -9,6 +9,7 @@ langchain-openai = "*"
 python-dotenv = "*"
 tiktoken = "*"
 chromadb = "*"
+langchain-community = "*"
 
 [dev-packages]
 
