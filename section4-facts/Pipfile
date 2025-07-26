@@ -10,6 +10,7 @@ python-dotenv = "*"
 tiktoken = "*"
 chromadb = "*"
 langchain-community = "*"
+matplotlib = "*"
 
 [dev-packages]
 
